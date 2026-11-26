@@ -61,7 +61,7 @@ body {
 .avatar {
     position: absolute;
     bottom: -120px;
-    right: calc(50% - 135px);
+    right: calc((100% - 250px) / 2);
 }
 .avatar > img {
     border-radius: 50%;
@@ -74,7 +74,7 @@ body {
 }
 
 .main {
-    margin-top: 114px;
+    margin-top: 130px;
 }
 
 .main-title {
@@ -103,6 +103,8 @@ body {
     padding: 16px;
     background-color: #F0DED7;
     border-radius: 5px;
+    font-width: 500;
+    line-height: 175%;
 }
 
 .sec-title {
@@ -240,9 +242,21 @@ body {
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+    .main {
+        margin-top: 140px;
+    }
     .main-title {
         font-size: 64px;
+    }
+    .avatar {
+        width: 150px;
+        height: 150px;
+        bottom: calc(-50px / 2);
+        right: calc((100% - 75px) / 2);
+    }
+    .bg, .bg > img {
+        max-width: 768px;
     }
 }
 @media screen and (max-width: 376px) {
@@ -254,5 +268,11 @@ body {
     }
     .main-descr {
         font-size: 24px;
+    }
+    .avatar {
+        width: 150px;
+        height: 150px;
+        bottom: calc(-50px / 2);
+        right: calc((100% - 50px) / 2);
     }
 }
